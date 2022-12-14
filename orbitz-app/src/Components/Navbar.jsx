@@ -14,6 +14,12 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    MenuDivider,
+    Avatar
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -22,7 +28,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
-  export default function Navbar() {
+  export default function Nav() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
@@ -68,26 +74,32 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
-            </Button>
+            
+            
+            <Flex alignItems={'center'}>
+            <Menu>
+              <MenuButton
+                as={Button}
+                rounded={'full'}
+                variant={'link'}
+                cursor={'pointer'}
+                minW={0}>
+                Sign In
+              </MenuButton>
+              <MenuList padding={15}>
+                <h2>Members can access discounts,<br /> points and special features</h2>
+                <MenuItem>Link 1</MenuItem>
+                <Button color={'white'} bg={'red.500'} width="90%">Sign in </Button>
+                <Link href=''>Create a free account</Link><br /><br />
+                <Link>List of favourites</Link><br />
+                <Link>Loyalty program</Link><br />
+                <hr h={20}/>
+                <Link>Feedback</Link>
+                
+              </MenuList>
+            
+            </Menu>
+          </Flex>
           </Stack>
         </Flex>
   
@@ -242,45 +254,62 @@ import {
     );
   };
   
-  
-  
-  const NAV_ITEMS= [
+  const NAV_ITEMS  = [
     {
-      label: 'Inspiration',
+      label: 'More Travel',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
+          subLabel: 'Stays',
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
+          subLabel: 'Flights',
           href: '#',
+        },
+        {
+            subLabel: 'Packages',
+            href: '#',
+        },
+        {
+            subLabel: 'Cars',
+            href: '#',
+        },
+        {
+            subLabel: 'cruises',
+            href: '#',
+        },
+        {
+            subLabel: 'Things to do',
+            href: '#',
+        },
+        {
+            subLabel: 'Deals',
+            href: '#',
+        },
+        {
+            subLabel: 'Groups & meetings',
+            href: '#',
+        },
+        {
+            subLabel: 'Travel Blog',
+            href: '#',
         },
       ],
     },
     {
-      label: 'Find Work',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
+        label: 'English',
+        href: '#',
     },
     {
-      label: 'Learn Design',
+        label: 'List your property',
+        href: '#',
+    },
+    {
+      label: 'Support',
       href: '#',
     },
     {
-      label: 'Hire Designers',
+      label: 'Trips',
       href: '#',
     },
   ];
