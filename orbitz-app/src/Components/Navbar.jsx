@@ -34,11 +34,11 @@ import {
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          bg={useColorModeValue('#00253c')}
+          
+          minH={'80px'}
           py={{ base: 2 }}
-          px={{ base: 4 }}
+          px={{ base: 20 }}
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -60,15 +60,21 @@ import {
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
+              color={'white'}
+              >
+              𝙏𝙧𝙖𝙫𝙚𝙡𝙎𝙥𝙝𝙚𝙧𝙚
             </Text>
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10} >
               <DesktopNav />
             </Flex>
+
+            <Flex display={{ base: 'none', lg:'flex-end', md: 'flex' }} ml={550} >
+              <DesktopNav2 />
+            </Flex>
           </Flex>
-  
+
+        
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
@@ -77,13 +83,22 @@ import {
             
             
             <Flex alignItems={'center'}>
+              
             <Menu>
               <MenuButton
                 as={Button}
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
-                minW={0}>
+                minW={0}
+                mr={150}
+                fontSize={'sm'}
+                  fontWeight={500}
+                  color={'white'}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: 'teal',
+                  }}>
                 Sign In
               </MenuButton>
               <MenuList padding={15}>
@@ -126,10 +141,10 @@ import {
                   href={navItem.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
-                  color={linkColor}
+                  color={'white'}
                   _hover={{
                     textDecoration: 'none',
-                    color: linkHoverColor,
+                    color: 'teal',
                   }}>
                   {navItem.label}
                 </Link>
@@ -150,6 +165,37 @@ import {
                   </Stack>
                 </PopoverContent>
               )}
+            </Popover>
+          </Box>
+        ))}
+      </Stack>
+    );
+  };
+
+  const DesktopNav2 = () => {
+    const linkColor = useColorModeValue('gray.600', 'gray.200');
+    const linkHoverColor = useColorModeValue('gray.800', 'white');
+    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  
+    return (
+      <Stack direction={'row'} spacing={4}>
+        {NAV_ITEMS2.map((navItem) => (
+          <Box key={navItem.label}>
+            <Popover trigger={'hover'} placement={'bottom-start'}>
+              <PopoverTrigger>
+                <Link
+                  p={2}
+                  href={navItem.href ?? '#'}
+                  fontSize={'sm'}
+                  fontWeight={500}
+                  color={'white'}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: 'teal',
+                  }}>
+                  {navItem.label}
+                </Link>
+              </PopoverTrigger>
             </Popover>
           </Box>
         ))}
@@ -296,10 +342,13 @@ import {
         },
       ],
     },
+  ];
+
+  const NAV_ITEMS2  = [
     {
-        label: 'English',
-        href: '#',
-    },
+      label: 'English',
+      href: '#',
+   },
     {
         label: 'List your property',
         href: '#',
@@ -313,3 +362,5 @@ import {
       href: '#',
     },
   ];
+
+  
