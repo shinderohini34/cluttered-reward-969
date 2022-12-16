@@ -244,3 +244,32 @@ justify-content: start;
     height: 230px;
 }
 }
+.mainDiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+.image1{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium");
+    width: 265px;
+    height: 170px;
+}
+.image2{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium");
+    width: 265px;
+    height: 170px;
+}
+.image3{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium");
+    width: 265px;
+    height: 170px;
+    
+}
+.image4{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium");
+    width: 265px;
+    height: 170px;
+}

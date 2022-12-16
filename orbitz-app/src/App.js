@@ -3,16 +3,13 @@ import './App.css';
 import "./index.css"
 import Nav from "./Components/Navbar"
 import Footer from "./Components/Footer"
-import MiddleSection from "./Home/Header"
-
-import AllHomePage from './Home/HomePage';
+import AllHomePage from './Home/AllHomePage';
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <MiddleSection/>
-      
+      <AllHomePage/>
       <Footer />
       
     </div>
