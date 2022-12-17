@@ -1,0 +1,5 @@
+.bg_image{
+    height: 400px;
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=225&q=mediumHigh");
+    background-size: cover;
+}
