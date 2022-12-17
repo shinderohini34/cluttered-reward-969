@@ -82,11 +82,11 @@ export const Dropdown = () => {
         <div>
           <RiCarFill />
         </div>
-          <div>
-            <Link to="/cars" style={{ textDecoration: "none", color: "#007e8f" }}>
-              Cars
-            </Link>
-          </div>
+        <div>
+          <Link to="/cars" style={{ textDecoration: "none", color: "#007e8f" }}>
+            Cars
+          </Link>
+        </div>
       </div>
       <div
         className="blue"
