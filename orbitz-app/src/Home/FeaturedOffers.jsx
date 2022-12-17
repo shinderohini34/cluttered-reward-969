@@ -2,7 +2,7 @@ import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import styles from"./Reward.module.css"
+import styles from "./Reward.module.css";
 
 export const Featuredoffers = () => {
   const img = [
@@ -97,8 +97,10 @@ export const Featuredoffers = () => {
     }
   `;
 
-  const seaimg="https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg"
- const seaimgs="https://tpc.googlesyndication.com/simgad/6378264940813121541?";
+  const seaimg =
+    "https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg";
+  const seaimgs =
+    "https://tpc.googlesyndication.com/simgad/6378264940813121541?";
   return (
     <MainCont>
       <Cont>
@@ -107,40 +109,36 @@ export const Featuredoffers = () => {
         </Heading>
         <ImgCont>
           {img.map((i) => (
-            <Link to="/Hotels"><CardCont>
-            <ImgCardCont>
-              <img src={i.url} alt="" />
-              <Title>
-                <h2>{i.title}</h2>
-                <TextCont>
-                  <p>{i.p}</p>
-                </TextCont>
-              </Title>
-            </ImgCardCont>
-          </CardCont></Link>
+            <Link to="/Hotels">
+              <CardCont>
+                <ImgCardCont>
+                  <img src={i.url} alt="" />
+                  <Title>
+                    <h2>{i.title}</h2>
+                    <TextCont>
+                      <p>{i.p}</p>
+                    </TextCont>
+                  </Title>
+                </ImgCardCont>
+              </CardCont>
+            </Link>
           ))}
         </ImgCont>
       </Cont>
 
-    <div className={styles.mss} >
-
-
-   <Box className={styles.firstcss} bgImage={seaimg}   
-       bgRepeat="no-repeat" >
-
-   </Box>
-   <Box className={styles.seccss} bgImage={seaimgs}   bgPosition="center" 
-          bgRepeat="no-repeat">
-
-   
-   </Box>
-
-
-    
-    
-
-
-    </div>
+      <div className={styles.mss}>
+        <Box
+          className={styles.firstcss}
+          bgImage={seaimg}
+          bgRepeat="no-repeat"
+        ></Box>
+        <Box
+          className={styles.seccss}
+          bgImage={seaimgs}
+          bgPosition="center"
+          bgRepeat="no-repeat"
+        ></Box>
+      </div>
     </MainCont>
   );
 };

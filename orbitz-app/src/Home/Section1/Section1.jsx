@@ -9,11 +9,12 @@ import { Pacakges } from "./Pacakges";
 import { Things_to_do } from "./Things_to_do";
 import { Curises } from "./Curises";
 
-
-export const First = () => {
+export const Section1 = () => {
   return (
     <div className={styles.home}>
-      <br /><br /><br />
+      <br />
+      <br />
+      <br />
       <Box className={styles.containerSearchBox}>
         <Tabs>
           <TabList style={{ justifyContent: "center" }}>
@@ -24,10 +25,10 @@ export const First = () => {
             <Tab>things to do</Tab>
             <Tab>Curises</Tab>
           </TabList>
-          
+
           <TabPanels>
             <TabPanel>
-                <Stay/>
+              <Stay />
             </TabPanel>
             <TabPanel>
               <Flight />
@@ -45,8 +46,6 @@ export const First = () => {
               <Curises />
             </TabPanel>
           </TabPanels>
-
-          
         </Tabs>
       </Box>
     </div>
