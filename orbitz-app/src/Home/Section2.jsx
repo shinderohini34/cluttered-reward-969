@@ -1,5 +1,5 @@
 import "./FeaturedOffers.css";
-import "./Header.css";
+import "./Section2.css";
 import { Link, NavLink } from "react-router-dom";
 import {
   Stack,
@@ -14,7 +14,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-export default function MiddleSection() {
+export default function Section2() {
   return (
     <>
       <div className="middle">
@@ -119,6 +119,8 @@ export default function MiddleSection() {
         
       </LinkBox>
     </div>
+
+    
     </>
   );
 }

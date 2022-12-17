@@ -1,54 +1,25 @@
-import {
-    Stack,
-    Flex,
-    Button,
-    Text,
-    VStack,
-    useBreakpointValue,
-  } from '@chakra-ui/react';
-  
-  export default function Section4() {
-    return (
-      <Flex
-        w={'full'}
-        h={'100vh'}
-        backgroundImage={
-          'url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'
-        }
-        backgroundSize={'cover'}
-        backgroundPosition={'center center'}>
-        <VStack
-          w={'full'}
-          justify={'center'}
-          px={useBreakpointValue({ base: 4, md: 8 })}
-          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-          <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-            <Text
-              color={'white'}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              eiusmod tempor
-            </Text>
-            <Stack direction={'row'}>
-              <Button
-                bg={'blue.400'}
-                rounded={'full'}
-                color={'white'}
-                _hover={{ bg: 'blue.500' }}>
-                Show me more
-              </Button>
-              <Button
-                bg={'whiteAlpha.300'}
-                rounded={'full'}
-                color={'white'}
-                _hover={{ bg: 'whiteAlpha.500' }}>
-                Show me more
-              </Button>
-            </Stack>
-          </Stack>
-        </VStack>
-      </Flex>
-    );
-  }
+import "./Section4.css"
+import { Box, SimpleGrid, Heading, Text, Button} from "@chakra-ui/react"
+export default function Section4()
+{
+    return(
+        <>
+        <Box maxW="7xl" mx={'auto'} pt={3} px={{ base: 2, sm: 12, md: 17 }}>
+            <SimpleGrid columns={2} spacing={5} className="section4images">
+                <Box className="img1">
+                    <Heading pt={20}>National Parks</Heading>
+                    <Text>There's plenty to keep you busy.</Text>
+                    <Button color={"blue"} bg={"white"} size='sm' mt={3}>Button</Button>
+
+                </Box>
+                <Box className="img2">
+                    <Heading pt={20}>The perfect road trip</Heading>
+                    <Text>Find an adventure for every season</Text>
+                    <Button color={"blue"} bg={"white"} size='sm' mt={3}>Button</Button>
+                </Box>
+            </SimpleGrid>
+        </Box>
+        </>
+    )
+
+}
