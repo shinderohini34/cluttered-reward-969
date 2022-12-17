@@ -15,12 +15,14 @@ import {
   Input,
   Select,
 } from "@chakra-ui/react";
-import "./Section6.css"
+import "./Section6.css";
 export default function Section6() {
   return (
     <>
       <Box maxW="7xl" mx={"auto"} pt={10} px={{ base: 2, sm: 12, md: 17 }}>
-        <Heading fontSize="30px" pb={"5"}>More destinations</Heading>
+        <Heading fontSize="30px" pb={"5"}>
+          More destinations
+        </Heading>
         <SimpleGrid columns={3} spacing={5}>
           <Box height="40px" className="boxes">
             <Select placeholder="Select option">
