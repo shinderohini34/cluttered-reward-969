@@ -19,7 +19,8 @@ import {
     MenuList,
     MenuItem,
     MenuDivider,
-    Avatar
+    Avatar,
+    Heading
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -27,9 +28,13 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import { SignIn } from '../Home/SignIn';
+  import { useState,State } from 'react';
   
   export default function Nav() {
     const { isOpen, onToggle } = useDisclosure();
+    const [dropdown, setDropdown] = useState(false);
+    const [signdown, setSigndown] = useState(false);
   
     return (
       <Box>
@@ -98,17 +103,22 @@ import {
                   _hover={{
                     textDecoration: 'none',
                     color: 'teal',
+                  }}
+                  onClick={() => {
+                    setSigndown(!signdown);
                   }}>
-                Sign In
+                Sign In{signdown && <SignIn/>}
               </MenuButton>
-              <MenuList padding={15}>
-                <h2>Members can access discounts,<br /> points and special features</h2>
-                <MenuItem>Link 1</MenuItem>
+              <MenuList padding={8} maxW="500px">
+                <Heading fontSize="18px">Members can access discounts,<br /> points and special features</Heading>
+                <br />
                 <Button color={'white'} bg={'red.500'} width="90%">Sign in </Button>
-                <Link href=''>Create a free account</Link><br /><br />
-                <Link>List of favourites</Link><br />
+                <br/>
+                <Link href='' textAlign="center" color="teal" fontWeight={"bold"}>Create a free account</Link><br />
+                
+                <Link color={"teal"}>List of favourites</Link><br />
                 <Link>Loyalty program</Link><br />
-                <hr h={20}/>
+                <hr/>
                 <Link>Feedback</Link>
                 
               </MenuList>

@@ -1,0 +1,6 @@
+.boxes{
+    border: 1px solid gray;
+}
+.boxes:focus{
+    outline: none;
+}

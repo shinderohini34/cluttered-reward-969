@@ -1,0 +1,22 @@
+.img1{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg");
+    background-size: cover;
+    width: 609px;
+    height: 250px;
+    color: white;
+    
+    
+}
+.img2{
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg");
+    background-size: cover;
+    width: 612px;
+    height: 250px;
+    color: white;
+}
+.section4images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
