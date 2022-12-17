@@ -9,7 +9,7 @@ import { Pacakges } from "./Pacakges";
 import { Things_to_do } from "./Things_to_do";
 import { Curises } from "./Curises";
 
-export const First = () => {
+export const Section1 = () => {
   return (
     <div className={styles.home}>
       <br />
