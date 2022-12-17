@@ -1,4 +1,4 @@
-import "./FeaturedOffers.css";
+
 import "./Section2.css";
 import { Link, NavLink } from "react-router-dom";
 import {
