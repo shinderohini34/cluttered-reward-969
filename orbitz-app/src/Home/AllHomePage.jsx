@@ -1,3 +1,4 @@
+import { Car } from "./Section1/Car";
 import { First } from "./Section1/Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";

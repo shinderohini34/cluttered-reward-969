@@ -2,12 +2,13 @@ import React from "react";
 import styles from "./First.module.css";
 import { Box } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Stay } from "./Stay";
+import { Flight } from "./Flight";
 import { Car } from "./Car";
 import { Pacakges } from "./Pacakges";
-import { Flight } from "./Flight";
+import { Things_to_do } from "./Things_to_do";
 import { Curises } from "./Curises";
-import {Things_to_do} from "./Things_to_do"
-import { Stay } from "./Stay";
+
 
 export const First = () => {
   return (
@@ -23,10 +24,10 @@ export const First = () => {
             <Tab>things to do</Tab>
             <Tab>Curises</Tab>
           </TabList>
-
+          
           <TabPanels>
             <TabPanel>
-              <Stay/>
+                <Stay/>
             </TabPanel>
             <TabPanel>
               <Flight />
@@ -44,6 +45,8 @@ export const First = () => {
               <Curises />
             </TabPanel>
           </TabPanels>
+
+          
         </Tabs>
       </Box>
     </div>
