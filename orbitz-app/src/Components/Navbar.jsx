@@ -30,6 +30,7 @@ import {
 } from "@chakra-ui/icons";
 import { SignIn } from "../Home/SignIn";
 import { useState, State } from "react";
+import { Signindropdown } from "../Home/SignIn/SignIn";
 
 export default function Nav() {
   const { isOpen, onToggle } = useDisclosure();
@@ -102,6 +103,7 @@ export default function Nav() {
                   textDecoration: "none",
                   color: "teal",
                 }}
+                
                 onClick={() => {
                   setSigndown(!signdown);
                 }}
@@ -109,6 +111,7 @@ export default function Nav() {
                 Sign In{signdown && <SignIn />}
               </MenuButton>
               <MenuList padding={8} maxW="500px">
+                <Signindropdown/>
                 <Heading fontSize="18px">
                   Members can access discounts,
                   <br /> points and special features
