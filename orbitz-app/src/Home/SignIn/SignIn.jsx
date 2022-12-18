@@ -4,9 +4,7 @@ import {Link} from "react-router-dom"
 export const Signindropdown =()=>{
     const [signdown,setSigndown] = useState(false)
     return(
-        <div className={signdown?"signdown_clicked":"signdown"} onClick={()=>{
-            setSigndown(!signdown)
-        }} >
+        <div className="mainDiv">
            <div className="members" ><h2>Members can access discounts,
                 points and special features</h2></div>
            <div className="sign-button" >

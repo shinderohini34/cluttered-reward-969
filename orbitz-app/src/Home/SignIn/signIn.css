@@ -18,7 +18,8 @@
     justify-content: center;
     align-items: center;
     padding:20px;
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .sign-button{
     width: 100%;
@@ -26,14 +27,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .button-link{
-    width: 300px;
-    height: 50px;
-    background-color: #f50057;
+    width: 350px;
+    height: 35px;
+    background-color: #c83259;
     color: white;
     cursor: pointer;
 
@@ -41,6 +43,7 @@
 
 .sign-button>h2{
     color: #007e8f;
+    margin-top: 20px;
 }
 .sign-txt{
     width: 100%;
@@ -61,4 +64,8 @@
 }
 .feedback:hover{
     color:#007e8f;
+}
+.mainDiv{
+    width: 400px;
+    line-height: 30px;
 }

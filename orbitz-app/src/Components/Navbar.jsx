@@ -28,7 +28,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { SignIn } from "../Home/SignIn";
+
 import { useState, State } from "react";
 import { Signindropdown } from "../Home/SignIn/SignIn";
 
@@ -95,7 +95,8 @@ export default function Nav() {
                 variant={"link"}
                 cursor={"pointer"}
                 minW={0}
-                mr={150}
+                mr="130px"
+                mt="2px"
                 fontSize={"sm"}
                 fontWeight={500}
                 color={"white"}
@@ -103,40 +104,17 @@ export default function Nav() {
                   textDecoration: "none",
                   color: "teal",
                 }}
-                
-                onClick={() => {
-                  setSigndown(!signdown);
-                }}
-              >
-                Sign In{signdown && <SignIn />}
+              
+              >Sign In
               </MenuButton>
-              <MenuList padding={8} maxW="500px">
-                <Signindropdown/>
-                <Heading fontSize="18px">
-                  Members can access discounts,
-                  <br /> points and special features
-                </Heading>
-                <br />
-                <Button color={"white"} bg={"red.500"} width="90%">
-                  Sign in{" "}
-                </Button>
-                <br />
-                <Link
-                  href=""
-                  textAlign="center"
-                  color="teal"
-                  fontWeight={"bold"}
-                >
-                  Create a free account
-                </Link>
-                <br />
-
-                <Link color={"teal"}>List of favourites</Link>
-                <br />
-                <Link>Loyalty program</Link>
-                <br />
-                <hr />
-                <Link>Feedback</Link>
+              
+              <MenuList>
+              {<Signindropdown/>}
+                
+                
+                
+               
+                
               </MenuList>
             </Menu>
           </Flex>
